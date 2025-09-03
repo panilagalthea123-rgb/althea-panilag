@@ -1,0 +1,298 @@
+
+
+@font-face {
+    font-family: 'CustomCursive'; 
+    src: url('YourCursiveFont.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #ffffff;
+    color: #000000;
+    scroll-behavior: smooth;
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+.page {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    scroll-snap-align: start;
+    position: relative;
+}
+
+
+.next-page-link {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#page1 {
+    background-color: #ffffff;
+    padding: 20px; 
+    padding-top: 80px; 
+}
+
+.page-title-header {
+    position: absolute; 
+    top: 30px; 
+    text-align: center; 
+}
+
+.page-main-title {
+    font-family: 'CustomCursive', sans-serif; 
+    font-size: 3rem; 
+    letter-spacing: 2px;
+    color: #333; 
+    margin: 0;
+}
+
+
+#page1 .content-container.wide {
+    display: flex;
+    width: 90%;
+    max-width: 1600px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#page1 .images-left {
+    display: flex;
+    gap: 30px;
+    justify-content: flex-start;
+    flex: 2;
+}
+
+#page1 .image-box {
+    flex-shrink: 0;
+    border: 1px solid #e0e0e0;
+}
+
+#page1 .image-box img {
+    height: 70vh;
+    width: auto;
+    object-fit: contain;
+}
+
+#page1 .signature-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 400px;
+}
+
+.signature-full {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    object-fit: contain;
+}
+
+
+#page2 {
+    background-color: #fefcfb;
+}
+
+#page2 .content-container {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    max-width: 1200px;
+    padding: 50px;
+}
+
+#page2 .image-box {
+    flex: 1.5;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 50px;
+}
+
+#page2 .image-box img {
+    width: 100%;
+    height: auto;
+    max-height: 85vh;
+    object-fit: contain;
+}
+
+#page2 .info-box {
+    flex: 1;
+    border-left: 2px solid #b8a69d;
+    padding-left: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header {
+    position: absolute;
+    top: 20px;
+    right: 50px;
+}
+
+.fanpage-title {
+    font-size: 1.5rem;
+    letter-spacing: 5px;
+    margin: 0;
+    color: #b8a69d;
+}
+
+.section-title {
+    font-family: 'CustomCursive', sans-serif; 
+    font-size: 3.5rem;
+    margin: 0 0 30px;
+    color: #5d4d42;
+}
+
+.info-list p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+
+#page3 {
+    background-color: #f0f0f0;
+    padding: 40px 80px;
+}
+
+#page3 .image-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 100%;
+    max-width: 1400px;
+    margin-bottom: 30px;
+}
+
+#page3 .grid-item {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+#page3 .bio-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 100%;
+    max-width: 1400px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.bio-item {
+    text-align: left;
+    padding-right: 10px;
+}
+
+
+@media (max-width: 768px) {
+    .page {
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 50px;
+        padding: 20px;
+    }
+
+    .next-page-link {
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 0;
+    }
+
+    .page-title-header {
+        position: static; 
+        margin-bottom: 20px;
+    }
+
+    .page-main-title {
+        font-size: 2rem;
+    }
+
+    #page1 .content-container.wide {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #page1 .images-left {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 30px;
+    }
+
+    #page1 .image-box img {
+        height: auto;
+        width: 80%;
+        max-width: 300px;
+    }
+
+    #page1 .signature-right {
+        min-width: auto;
+    }
+
+    .signature-full {
+        width: 80%;
+        max-width: 300px;
+    }
+
+    #page2 .content-container {
+        flex-direction: column;
+        width: 100%;
+        padding: 20px;
+    }
+
+    #page2 .image-box {
+        padding-right: 0;
+        margin-bottom: 30px;
+        justify-content: center;
+    }
+
+    #page2 .image-box img {
+        max-height: 50vh;
+    }
+
+    #page2 .info-box {
+        border-left: none;
+        border-top: 2px solid #ccc;
+        padding-top: 30px;
+        min-height: auto;
+    }
+
+    #page2 .header {
+        position: static;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    #page2 .fanpage-title {
+        text-align: center;
+    }
+
+    #page2 .section-title {
+        font-size: 2.5rem;
+    }
+    
+    #page3 .image-grid, #page3 .bio-grid {
+        grid-template-columns: 1fr;
+    }
+}
