@@ -1,0 +1,156 @@
+/* Reset */
+* {
+  margin: 0; padding: 0; box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #fffafc;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background: #ffe4f1;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+header h1 {
+  font-size: 2rem;
+  color: #ff69b4;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+nav ul li {
+  margin: 0 15px;
+}
+nav ul li a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #555;
+  padding: 8px 15px;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+nav ul li a:hover {
+  background: #ff69b4;
+  color: white;
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(135deg, #ffe4f1, #e6f0ff);
+  text-align: center;
+  padding: 100px 20px;
+}
+.hero h2 {
+  font-size: 2.5rem;
+  color: #ff69b4;
+}
+.hero p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+/* Sections */
+.section {
+  background: #fff;
+  padding: 50px 30px;
+  margin: 30px auto;
+  max-width: 1000px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  text-align: center;
+}
+.section h2 {
+  font-size: 2rem;
+  color: #ff69b4;
+  margin-bottom: 25px;
+}
+
+/* About */
+.bio-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.bio-info img {
+  max-width: 300px;
+  border-radius: 50%;
+  border: 5px solid #ffd6e8;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  margin-bottom: 20px;
+}
+
+/* Gallery */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+.gallery-item img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+.gallery-item img:hover {
+  transform: scale(1.05);
+}
+
+/* Social */
+.social-links {
+  margin-top: 20px;
+}
+.social-links a {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 20px;
+  background: #ff69b4;
+  color: white;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.social-links a:hover {
+  background: #ff85c1;
+  transform: scale(1.05);
+}
+
+/* Updates */
+.updates-list h3 {
+  color: #ff69b4;
+  margin-top: 20px;
+}
+.updates-list p {
+  margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+  background: #ffe4f1;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 30px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+  .bio-info {
+    text-align: center;
+  }
+}
